@@ -1,0 +1,102 @@
+<section id="form" class="form">
+  <h2 class="block-title">Форма</h2>
+  <p class="block-descr">Должна иметь проверку полей: обязательное поле, формат, минимальное значение. При несоответствии должна выводиться соответствующая ошибка. Поле «Телефон» должен содержать маску ввода. </p>
+  <form class="form-order" >
+    <h3 class="form-order__title">Заказать проект</h3>
+    <h4 class="form-order__input-title">Название</h4>
+    <label class="form-order__name">
+      <input type="text" class="input-reset form-order__input form-order__input-name" id="name">
+    </label>
+    <div class="form-order__flex form-order__calculations">
+      <div class="form-order__price">
+        <h4 class="form-order__input-title">Стоимость</h4>
+        <div class="form-order__input-price-block">
+          <input type="text" class="input-reset form-order__input form-order__input-slider" id="input-slider">
+          <span class="form-order__input-price-placeholder">₽</span>
+        </div>
+        <div class="form-order__slider" id="range-slider"></div>
+      </div>
+      <div class="form-order__square">
+        <h4 class="form-order__input-title">Площадь</h4>
+        <div class="form-order__square-group">
+          <button type="button" class="btn-reset form-order__button-value form-order__button-min">
+            <span class="value minus"></span>
+          </button>
+          <div class="form-order__input-square-block">
+            <input type="number" class="input-reset form-order__input form-order__input-square">
+            <span class="form-order__input-square-placeholder">м<sup>2</sup></span>
+          </div>
+          <button type="button" class="btn-reset form-order__button-value form-order__button-plus">
+            <span class="value"></span>
+            <span class="value plus"></span>
+          </button>
+        </div>
+      </div>
+      <div class="form-order__block-checkbox">
+        <h4 class="form-order__input-title">Отделка</h4>
+        <label class="form-order__checkbox">
+          <div class="checkbox">
+            <input type="checkbox" checked class="visually-hidden">
+            <span class="form-order__input-checkbox"></span>
+            <span class="checkbox-descr checkbox-descr--active">Вайтбокс</span>
+            <span class="checkbox-descr">Нет</span>
+          </div>
+        </label>
+      </div>
+    </div>
+    <div class="form-order__flex form-order__contacts">
+      <div class="form-order__phone">
+        <h4 class="form-order__input-title">Телефон</h4>
+        <input type="tel" class="input-reset form-order__input form-order__input-phone" id="phone" placeholder="+7">
+      </div>
+      <div class="form-order__email">
+        <h4 class="form-order__input-title">Почта</h4>
+        <input type="email" class="input-reset form-order__input form-order__input-email" id="email">
+      </div>
+    </div>
+    <label class="form-order__file-block">
+      <h4 class="form-order__input-title">Приложить файлы</h4>
+      <div class="form-order__file">
+        <span class="form-order__file-descr form-order__file-descr--title">Кликните или перенесите файлы в эту область.</span>
+        <span class="form-order__file-descr">Только JPG, до 1 Мб</span>
+        <input id="myFile" type="file" class="visually-hidden" accept="image/jpeg" multiple="multiple">
+      </div>
+      <p id="file-name-block" class="file-name-block"></p>
+    </label>
+    <div class="form-order__flex form-order__materials">
+      <div class="form-order__selector">
+        <h4 class="form-order__input-title">Материалы дома</h4>
+        <select name="select" id="selectMaterials" aria-label="Выбор категории">
+          <option class="selections" value="">Любые</option>
+          <option class="selections" value="1">Кирпичный</option>
+          <option class="selections" value="2">Деревянный</option>
+          <option class="selections" value="3">Монолитный</option>
+          <option class="selections" value="4">Каркасный</option>
+          <option class="selections" value="5">Щитовой</option>
+          <option class="selections" value="6">Кирпичный</option>
+          <option class="selections" value="7">Деревянный</option>
+          <option class="selections" value="8">Монолитный</option>
+          <option class="selections" value="9">Каркасный</option>
+          <option class="selections" value="10">Щитовой</option>
+        </select>
+      </div>
+      <div class="form-order__password">
+        <h4 class="form-order__input-title">Пароль</h4>
+        <div class="password-field">
+          <input type="password" class="input-reset form-order__input form-order__input-password" id="password">
+          <button class="btn-reset password-btn">
+            <svg width="24" height="24" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="password-icon">
+              <use xlink:href="img/sprite.svg#eye">
+              </use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="form-order__wish">
+      <h4 class="form-order__input-title">Пожелания</h4>
+      <input type="text" class="form-control form-order__input-wish" id="choices-text-remove-button"  placeholder="укажите через запятую">
+    </div>
+    <button class="btn-reset form-order__btn-send">Отправить заявку</button>
+  </form>
+</section>

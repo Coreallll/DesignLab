@@ -1,0 +1,1827 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design Lab</title>
+  <link rel="stylesheet" href="/css/vendor.css">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body class="body">
+  <header class="header">
+  <div class="container header__container">
+    <nav class="header__nav">
+      <ul class="list-reset header__nav-list">
+        <li class="header__nav-item">
+          <a href="#table" class="header__nav-link header__nav-link--active">Таблица</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="#form" class="header__nav-link">Форма</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="#gallery" class="header__nav-link">Галерея</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <main class="main">
+    <div class="container">
+      <section class="hero">
+  <div class="container hero__container">
+    <nav class="hero__nav">
+      <ul class="list-reset hero__nav-list">
+        <li class="hero__nav-item">
+          <a href="" class="hero__nav-link">Главная</a>
+          <span>/</span>
+        </li>
+        <li class="hero__nav-item">
+          <a href="" class="hero__nav-link">Тестовое задание</a>
+        </li>
+      </ul>
+    </nav>
+    <h1 class="hero__title">Тестовое задание</h1>
+  </div>
+</section>
+      <div class="container-content">
+        <section id="table" class="table">
+  <h2 class="block-title">Таблица</h2>
+  <p class="block-descr">Должна быть адаптивной, без дублирования информации.</p>
+  <table class="table__container">
+    <tr class="table__stroke table__stroke-title">
+      <th class="table__cell table__cell-title">Название</th>
+      <th class="table__cell table__cell-title">Материал</th>
+      <th class="table__cell table__cell-title">Размер</th>
+      <th class="table__cell table__cell-title table__cell-price">Цена</th>
+      <th class="table__cell table__cell-title"></th>
+    </tr>
+    <tr class="table__stroke">
+      <td class="table__cell" data-label="Название">Стеновой паркет</td>
+      <td class="table__cell" data-label="Материал">Ольха</td>
+      <td class="table__cell" data-label="Размер">13 × 78 × 300 мм</td>
+      <td class="table__cell table__cell-price" data-label="Цена">52 ₽</td>
+      <td class="table__cell"><button class="btn-reset btn-basket btn-basket--1">В корзину</button></td>
+    </tr>
+    <tr class="table__stroke">
+      <td class="table__cell" data-label="Название">Стеновой паркет</td>
+      <td class="table__cell" data-label="Материал">Ольха</td>
+      <td class="table__cell" data-label="Размер">13 × 78 × 600 мм</td>
+      <td class="table__cell table__cell-price" data-label="Цена">112 ₽</td>
+      <td class="table__cell"><button class="btn-reset btn-basket btn-basket--2">В корзину</button></td>
+    </tr>
+    <tr class="table__stroke">
+      <td class="table__cell" data-label="Название">Доска для пола, сорт А</td>
+      <td class="table__cell" data-label="Материал">Лиственница</td>
+      <td class="table__cell" data-label="Размер">27 × 134 × 2000 мм</td>
+      <td class="table__cell table__cell-price" data-label="Цена">1062 ₽</td>
+      <td class="table__cell"><button class="btn-reset btn-basket btn-basket--3">В корзину</button></td>
+    </tr>
+    <tr class="table__stroke">
+      <td class="table__cell" data-label="Название">Вагонка</td>
+      <td class="table__cell" data-label="Материал">Термо-абаш</td>
+      <td class="table__cell" data-label="Размер">19 × 90 × 2000 мм</td>
+      <td class="table__cell table__cell-price" data-label="Цена">1009 ₽</td>
+      <td class="table__cell"><button class="btn-reset btn-basket btn-basket--4">В корзину</button></td>
+    </tr>
+  </table>
+</section>
+        <section id="form" class="form">
+  <h2 class="block-title">Форма</h2>
+  <p class="block-descr">Должна иметь проверку полей: обязательное поле, формат, минимальное значение. При несоответствии должна выводиться соответствующая ошибка. Поле «Телефон» должен содержать маску ввода. </p>
+  <form class="form-order" >
+    <h3 class="form-order__title">Заказать проект</h3>
+    <h4 class="form-order__input-title">Название</h4>
+    <label class="form-order__name">
+      <input type="text" class="input-reset form-order__input form-order__input-name" id="name">
+    </label>
+    <div class="form-order__flex form-order__calculations">
+      <div class="form-order__price">
+        <h4 class="form-order__input-title">Стоимость</h4>
+        <div class="form-order__input-price-block">
+          <input type="text" class="input-reset form-order__input form-order__input-slider" id="input-slider">
+          <span class="form-order__input-price-placeholder">₽</span>
+        </div>
+        <div class="form-order__slider" id="range-slider"></div>
+      </div>
+      <div class="form-order__square">
+        <h4 class="form-order__input-title">Площадь</h4>
+        <div class="form-order__square-group">
+          <button type="button" class="btn-reset form-order__button-value form-order__button-min">
+            <span class="value minus"></span>
+          </button>
+          <div class="form-order__input-square-block">
+            <input type="number" class="input-reset form-order__input form-order__input-square">
+            <span class="form-order__input-square-placeholder">м<sup>2</sup></span>
+          </div>
+          <button type="button" class="btn-reset form-order__button-value form-order__button-plus">
+            <span class="value"></span>
+            <span class="value plus"></span>
+          </button>
+        </div>
+      </div>
+      <div class="form-order__block-checkbox">
+        <h4 class="form-order__input-title">Отделка</h4>
+        <label class="form-order__checkbox">
+          <div class="checkbox">
+            <input type="checkbox" checked class="visually-hidden">
+            <span class="form-order__input-checkbox"></span>
+            <span class="checkbox-descr checkbox-descr--active">Вайтбокс</span>
+            <span class="checkbox-descr">Нет</span>
+          </div>
+        </label>
+      </div>
+    </div>
+    <div class="form-order__flex form-order__contacts">
+      <div class="form-order__phone">
+        <h4 class="form-order__input-title">Телефон</h4>
+        <input type="tel" class="input-reset form-order__input form-order__input-phone" id="phone" placeholder="+7">
+      </div>
+      <div class="form-order__email">
+        <h4 class="form-order__input-title">Почта</h4>
+        <input type="email" class="input-reset form-order__input form-order__input-email" id="email">
+      </div>
+    </div>
+    <label class="form-order__file-block">
+      <h4 class="form-order__input-title">Приложить файлы</h4>
+      <div class="form-order__file">
+        <span class="form-order__file-descr form-order__file-descr--title">Кликните или перенесите файлы в эту область.</span>
+        <span class="form-order__file-descr">Только JPG, до 1 Мб</span>
+        <input id="myFile" type="file" class="visually-hidden" accept="image/jpeg" multiple="multiple">
+      </div>
+      <p id="file-name-block" class="file-name-block"></p>
+    </label>
+    <div class="form-order__flex form-order__materials">
+      <div class="form-order__selector">
+        <h4 class="form-order__input-title">Материалы дома</h4>
+        <select name="select" id="selectMaterials" aria-label="Выбор категории">
+          <option class="selections" value="">Любые</option>
+          <option class="selections" value="1">Кирпичный</option>
+          <option class="selections" value="2">Деревянный</option>
+          <option class="selections" value="3">Монолитный</option>
+          <option class="selections" value="4">Каркасный</option>
+          <option class="selections" value="5">Щитовой</option>
+          <option class="selections" value="6">Кирпичный</option>
+          <option class="selections" value="7">Деревянный</option>
+          <option class="selections" value="8">Монолитный</option>
+          <option class="selections" value="9">Каркасный</option>
+          <option class="selections" value="10">Щитовой</option>
+        </select>
+      </div>
+      <div class="form-order__password">
+        <h4 class="form-order__input-title">Пароль</h4>
+        <div class="password-field">
+          <input type="password" class="input-reset form-order__input form-order__input-password" id="password">
+          <button class="btn-reset password-btn">
+            <svg width="24" height="24" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="password-icon">
+              <use xlink:href="img/sprite.svg#eye">
+              </use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="form-order__wish">
+      <h4 class="form-order__input-title">Пожелания</h4>
+      <input type="text" class="form-control form-order__input-wish" id="choices-text-remove-button"  placeholder="укажите через запятую">
+    </div>
+    <button class="btn-reset form-order__btn-send">Отправить заявку</button>
+  </form>
+</section>
+
+      </div>
+      <section id="gallery" class="gallery">
+  <div class="container-content">
+    <div class="gallery__block">
+      <h2 class="block-title">Галерея</h2>
+      <p class="block-descr block-descr--gallery">Фильтры должны фильтровать изображения без перезагрузки.  Адаптивность: между реперными точками — пропорциональное масштабирование, далее уменьшение кол-ва фото в строке. Пролистывание должно быть по 8 фото (страницами) для дектопа, по 4 фото на мобилке. Стрелки появляются только при наведении на блок с фото. </p>
+    </div>
+    <ul class="list-reset gallery__filter-list">
+      <li class="gallery__filter-item">
+        <button class="btn-reset gallery__filter-btn" data-path="bathhouse" data-pag="bathPag">Бани</button>
+      </li>
+      <li class="gallery__filter-item">
+        <button class="btn-reset gallery__filter-btn gallery__filter-btn--active" data-path="sauna" data-pag="saunaPag">Сауны</button>
+      </li>
+      <li class="gallery__filter-item">
+        <button class="btn-reset gallery__filter-btn" data-path="hammam" data-pag="hammamPag">Хаммамы</button>
+      </li>
+      <li class="gallery__filter-item">
+        <button class="btn-reset gallery__filter-btn" data-path="pool" data-pag="poolPag">Бассейны</button>
+      </li>
+    </ul>
+  </div>
+  <div class="swiper swiper-container swiper-spoiler swiper-bathhouse" data-target="bathhouse">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/1b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/1b.jpg" data-src="/img/1b.jpg" alt="Фото 1">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/2b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/2b.jpg" data-src="/img/2b.jpg" alt="Фото 2">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/3b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/3b.jpg" data-src="/img/3b.jpg" alt="Фото 3">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/4b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/4b.jpg" data-src="/img/4b.jpg" alt="Фото 4">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/5b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/5b.jpg" data-src="/img/5b.jpg" alt="Фото 5">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/6b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/6b.jpg" data-src="/img/6b.jpg" alt="Фото 6">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/7b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/7b.jpg" data-src="/img/7b.jpg" alt="Фото 7">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/8b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/8b.jpg" data-src="/img/8b.jpg" alt="Фото 8">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/1b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/1b.jpg" data-src="/img/1b.jpg" alt="Фото 1">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/2b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/2b.jpg" data-src="/img/2b.jpg" alt="Фото 2">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/3b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/3b.jpg" data-src="/img/3b.jpg" alt="Фото 3">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/4b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/4b.jpg" data-src="/img/4b.jpg" alt="Фото 4">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/5b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/5b.jpg" data-src="/img/5b.jpg" alt="Фото 5">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/6b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/6b.jpg" data-src="/img/6b.jpg" alt="Фото 6">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/7b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/7b.jpg" data-src="/img/7b.jpg" alt="Фото 7">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/8b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/8b.jpg" data-src="/img/8b.jpg" alt="Фото 8">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/1b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/1b.jpg" data-src="/img/1b.jpg" alt="Фото 1">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/2b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/2b.jpg" data-src="/img/2b.jpg" alt="Фото 2">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/3b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/3b.jpg" data-src="/img/3b.jpg" alt="Фото 3">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/4b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/4b.jpg" data-src="/img/4b.jpg" alt="Фото 4">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/5b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/5b.jpg" data-src="/img/5b.jpg" alt="Фото 5">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/6b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/6b.jpg" data-src="/img/6b.jpg" alt="Фото 6">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/7b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/7b.jpg" data-src="/img/7b.jpg" alt="Фото 7">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/8b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/8b.jpg" data-src="/img/8b.jpg" alt="Фото 8">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/1b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/1b.jpg" data-src="/img/1b.jpg" alt="Фото 1">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/2b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/2b.jpg" data-src="/img/2b.jpg" alt="Фото 2">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/3b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/3b.jpg" data-src="/img/3b.jpg" alt="Фото 3">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/4b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/4b.jpg" data-src="/img/4b.jpg" alt="Фото 4">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/5b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/5b.jpg" data-src="/img/5b.jpg" alt="Фото 5">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/6b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/6b.jpg" data-src="/img/6b.jpg" alt="Фото 6">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/7b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/7b.jpg" data-src="/img/7b.jpg" alt="Фото 7">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/8b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/8b.jpg" data-src="/img/8b.jpg" alt="Фото 8">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/1b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/1b.jpg" data-src="/img/1b.jpg" alt="Фото 1">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/2b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/2b.jpg" data-src="/img/2b.jpg" alt="Фото 2">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/3b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/3b.jpg" data-src="/img/3b.jpg" alt="Фото 3">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/4b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/4b.jpg" data-src="/img/4b.jpg" alt="Фото 4">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/5b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/5b.jpg" data-src="/img/5b.jpg" alt="Фото 5">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/6b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/6b.jpg" data-src="/img/6b.jpg" alt="Фото 6">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/7b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/7b.jpg" data-src="/img/7b.jpg" alt="Фото 7">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/8b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/8b.jpg" data-src="/img/8b.jpg" alt="Фото 8">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/1b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/1b.jpg" data-src="/img/1b.jpg" alt="Фото 1">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/2b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/2b.jpg" data-src="/img/2b.jpg" alt="Фото 2">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/3b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/3b.jpg" data-src="/img/3b.jpg" alt="Фото 3">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/4b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/4b.jpg" data-src="/img/4b.jpg" alt="Фото 4">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/5b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/5b.jpg" data-src="/img/5b.jpg" alt="Фото 5">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/6b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/6b.jpg" data-src="/img/6b.jpg" alt="Фото 6">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/7b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/7b.jpg" data-src="/img/7b.jpg" alt="Фото 7">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/8b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/8b.jpg" data-src="/img/8b.jpg" alt="Фото 8">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/1b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/1b.jpg" data-src="/img/1b.jpg" alt="Фото 1">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/2b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/2b.jpg" data-src="/img/2b.jpg" alt="Фото 2">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/3b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/3b.jpg" data-src="/img/3b.jpg" alt="Фото 3">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/4b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/4b.jpg" data-src="/img/4b.jpg" alt="Фото 4">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/5b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/5b.jpg" data-src="/img/5b.jpg" alt="Фото 5">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/6b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/6b.jpg" data-src="/img/6b.jpg" alt="Фото 6">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/7b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/7b.jpg" data-src="/img/7b.jpg" alt="Фото 7">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/8b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/8b.jpg" data-src="/img/8b.jpg" alt="Фото 8">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/1b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/1b.jpg" data-src="/img/1b.jpg" alt="Фото 1">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/2b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/2b.jpg" data-src="/img/2b.jpg" alt="Фото 2">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/3b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/3b.jpg" data-src="/img/3b.jpg" alt="Фото 3">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/4b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/4b.jpg" data-src="/img/4b.jpg" alt="Фото 4">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/5b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/5b.jpg" data-src="/img/5b.jpg" alt="Фото 5">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/6b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/6b.jpg" data-src="/img/6b.jpg" alt="Фото 6">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/7b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/7b.jpg" data-src="/img/7b.jpg" alt="Фото 7">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/8b.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/8b.jpg" data-src="/img/8b.jpg" alt="Фото 8">
+        </picture>
+      </div>
+    </div>
+    <div class="swiper-btn swiper-button-prev swiper-button-prev--bathhouse">
+      <svg width="32" height="32" viewbox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" class="arrow">
+        <use xlink:href="img/sprite.svg#arrow">
+        </use>
+      </svg>
+    </div>
+    <div class="swiper-btn swiper-button-next swiper-button-next--bathhouse">
+      <svg width="32" height="32" viewbox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" class="arrow arrow--right">
+        <use xlink:href="img/sprite.svg#arrow">
+        </use>
+      </svg>
+    </div>
+  </div>
+  <div class="swiper-pagination swiper-pagination--bathhouse" data-target="bathPag"></div>
+  <div class="swiper swiper-container swiper-spoiler swiper-sauna swiper-spoiler--active" data-target="sauna">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/1.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/1.jpg" data-src="/img/1.jpg" alt="Фото 1">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/2.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/2.jpg" data-src="/img/2.jpg" alt="Фото 2">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/3.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/3.jpg" data-src="/img/3.jpg" alt="Фото 3">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/4.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/4.jpg" data-src="/img/4.jpg" alt="Фото 4">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/5.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/5.jpg" data-src="/img/5.jpg" alt="Фото 5">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/6.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/6.jpg" data-src="/img/6.jpg" alt="Фото 6">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/7.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/7.jpg" data-src="/img/7.jpg" alt="Фото 7">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/8.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/8.jpg" data-src="/img/8.jpg" alt="Фото 8">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/1.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/1.jpg" data-src="/img/1.jpg" alt="Фото 1">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/2.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/2.jpg" data-src="/img/2.jpg" alt="Фото 2">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/3.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/3.jpg" data-src="/img/3.jpg" alt="Фото 3">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/4.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/4.jpg" data-src="/img/4.jpg" alt="Фото 4">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/5.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/5.jpg" data-src="/img/5.jpg" alt="Фото 5">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/6.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/6.jpg" data-src="/img/6.jpg" alt="Фото 6">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/7.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/7.jpg" data-src="/img/7.jpg" alt="Фото 7">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/8.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/8.jpg" data-src="/img/8.jpg" alt="Фото 8">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/1.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/1.jpg" data-src="/img/1.jpg" alt="Фото 1">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/2.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/2.jpg" data-src="/img/2.jpg" alt="Фото 2">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/3.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/3.jpg" data-src="/img/3.jpg" alt="Фото 3">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/4.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/4.jpg" data-src="/img/4.jpg" alt="Фото 4">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/5.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/5.jpg" data-src="/img/5.jpg" alt="Фото 5">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/6.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/6.jpg" data-src="/img/6.jpg" alt="Фото 6">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/7.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/7.jpg" data-src="/img/7.jpg" alt="Фото 7">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/8.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/8.jpg" data-src="/img/8.jpg" alt="Фото 8">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/1.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/1.jpg" data-src="/img/1.jpg" alt="Фото 1">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/2.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/2.jpg" data-src="/img/2.jpg" alt="Фото 2">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/3.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/3.jpg" data-src="/img/3.jpg" alt="Фото 3">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/4.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/4.jpg" data-src="/img/4.jpg" alt="Фото 4">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/5.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/5.jpg" data-src="/img/5.jpg" alt="Фото 5">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/6.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/6.jpg" data-src="/img/6.jpg" alt="Фото 6">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/7.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/7.jpg" data-src="/img/7.jpg" alt="Фото 7">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/8.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/8.jpg" data-src="/img/8.jpg" alt="Фото 8">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/1.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/1.jpg" data-src="/img/1.jpg" alt="Фото 1">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/2.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/2.jpg" data-src="/img/2.jpg" alt="Фото 2">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/3.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/3.jpg" data-src="/img/3.jpg" alt="Фото 3">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/4.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/4.jpg" data-src="/img/4.jpg" alt="Фото 4">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/5.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/5.jpg" data-src="/img/5.jpg" alt="Фото 5">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/6.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/6.jpg" data-src="/img/6.jpg" alt="Фото 6">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/7.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/7.jpg" data-src="/img/7.jpg" alt="Фото 7">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/8.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/8.jpg" data-src="/img/8.jpg" alt="Фото 8">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/1.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/1.jpg" data-src="/img/1.jpg" alt="Фото 1">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/2.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/2.jpg" data-src="/img/2.jpg" alt="Фото 2">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/3.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/3.jpg" data-src="/img/3.jpg" alt="Фото 3">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/4.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/4.jpg" data-src="/img/4.jpg" alt="Фото 4">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/5.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/5.jpg" data-src="/img/5.jpg" alt="Фото 5">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/6.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/6.jpg" data-src="/img/6.jpg" alt="Фото 6">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/7.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/7.jpg" data-src="/img/7.jpg" alt="Фото 7">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/8.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/8.jpg" data-src="/img/8.jpg" alt="Фото 8">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/1.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/1.jpg" data-src="/img/1.jpg" alt="Фото 1">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/2.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/2.jpg" data-src="/img/2.jpg" alt="Фото 2">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/3.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/3.jpg" data-src="/img/3.jpg" alt="Фото 3">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/4.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/4.jpg" data-src="/img/4.jpg" alt="Фото 4">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/5.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/5.jpg" data-src="/img/5.jpg" alt="Фото 5">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/6.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/6.jpg" data-src="/img/6.jpg" alt="Фото 6">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/7.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/7.jpg" data-src="/img/7.jpg" alt="Фото 7">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/8.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/8.jpg" data-src="/img/8.jpg" alt="Фото 8">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/1.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/1.jpg" data-src="/img/1.jpg" alt="Фото 1">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/2.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/2.jpg" data-src="/img/2.jpg" alt="Фото 2">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/3.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/3.jpg" data-src="/img/3.jpg" alt="Фото 3">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/4.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/4.jpg" data-src="/img/4.jpg" alt="Фото 4">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/5.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/5.jpg" data-src="/img/5.jpg" alt="Фото 5">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/6.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/6.jpg" data-src="/img/6.jpg" alt="Фото 6">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/7.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/7.jpg" data-src="/img/7.jpg" alt="Фото 7">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/8.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/8.jpg" data-src="/img/8.jpg" alt="Фото 8">
+        </picture>
+      </div>
+    </div>
+    <div class="swiper-btn swiper-button-prev swiper-button-prev--sauna">
+      <svg width="32" height="32" viewbox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" class="arrow">
+        <use xlink:href="img/sprite.svg#arrow">
+        </use>
+      </svg>
+    </div>
+    <div class="swiper-btn swiper-button-next swiper-button-next--sauna">
+      <svg width="32" height="32" viewbox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" class="arrow arrow--right">
+        <use xlink:href="img/sprite.svg#arrow">
+        </use>
+      </svg>
+    </div>
+  </div>
+  <div class="swiper-pagination swiper-pagination--sauna swiper-pagination--active" data-target="saunaPag"></div>
+  <div class="swiper swiper-container swiper-spoiler swiper-hammam" data-target="hammam">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/1h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/1h.jpg" data-src="/img/1h.jpg" alt="Фото 1">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/2h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/2h.jpg" data-src="/img/2h.jpg" alt="Фото 2">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/3h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/3h.jpg" data-src="/img/3h.jpg" alt="Фото 3">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/4h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/4h.jpg" data-src="/img/4h.jpg" alt="Фото 4">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/5h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/5h.jpg" data-src="/img/5h.jpg" alt="Фото 5">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/6h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/6h.jpg" data-src="/img/6h.jpg" alt="Фото 6">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/7h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/7h.jpg" data-src="/img/7h.jpg" alt="Фото 7">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/8h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/8h.jpg" data-src="/img/8h.jpg" alt="Фото 8">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/1h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/1h.jpg" data-src="/img/1h.jpg" alt="Фото 1">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/2h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/2h.jpg" data-src="/img/2h.jpg" alt="Фото 2">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/3h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/3h.jpg" data-src="/img/3h.jpg" alt="Фото 3">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/4h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/4h.jpg" data-src="/img/4h.jpg" alt="Фото 4">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/5h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/5h.jpg" data-src="/img/5h.jpg" alt="Фото 5">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/6h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/6h.jpg" data-src="/img/6h.jpg" alt="Фото 6">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/7h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/7h.jpg" data-src="/img/7h.jpg" alt="Фото 7">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/8h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/8h.jpg" data-src="/img/8h.jpg" alt="Фото 8">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/1h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/1h.jpg" data-src="/img/1h.jpg" alt="Фото 1">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/2h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/2h.jpg" data-src="/img/2h.jpg" alt="Фото 2">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/3h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/3h.jpg" data-src="/img/3h.jpg" alt="Фото 3">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/4h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/4h.jpg" data-src="/img/4h.jpg" alt="Фото 4">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/5h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/5h.jpg" data-src="/img/5h.jpg" alt="Фото 5">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/6h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/6h.jpg" data-src="/img/6h.jpg" alt="Фото 6">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/7h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/7h.jpg" data-src="/img/7h.jpg" alt="Фото 7">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/8h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/8h.jpg" data-src="/img/8h.jpg" alt="Фото 8">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/1h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/1h.jpg" data-src="/img/1h.jpg" alt="Фото 1">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/2h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/2h.jpg" data-src="/img/2h.jpg" alt="Фото 2">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/3h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/3h.jpg" data-src="/img/3h.jpg" alt="Фото 3">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/4h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/4h.jpg" data-src="/img/4h.jpg" alt="Фото 4">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/5h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/5h.jpg" data-src="/img/5h.jpg" alt="Фото 5">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/6h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/6h.jpg" data-src="/img/6h.jpg" alt="Фото 6">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/7h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/7h.jpg" data-src="/img/7h.jpg" alt="Фото 7">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/8h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/8h.jpg" data-src="/img/8h.jpg" alt="Фото 8">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/1h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/1h.jpg" data-src="/img/1h.jpg" alt="Фото 1">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/2h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/2h.jpg" data-src="/img/2h.jpg" alt="Фото 2">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/3h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/3h.jpg" data-src="/img/3h.jpg" alt="Фото 3">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/4h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/4h.jpg" data-src="/img/4h.jpg" alt="Фото 4">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/5h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/5h.jpg" data-src="/img/5h.jpg" alt="Фото 5">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/6h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/6h.jpg" data-src="/img/6h.jpg" alt="Фото 6">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/7h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/7h.jpg" data-src="/img/7h.jpg" alt="Фото 7">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/8h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/8h.jpg" data-src="/img/8h.jpg" alt="Фото 8">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/1h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/1h.jpg" data-src="/img/1h.jpg" alt="Фото 1">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/2h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/2h.jpg" data-src="/img/2h.jpg" alt="Фото 2">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/3h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/3h.jpg" data-src="/img/3h.jpg" alt="Фото 3">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/4h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/4h.jpg" data-src="/img/4h.jpg" alt="Фото 4">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/5h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/5h.jpg" data-src="/img/5h.jpg" alt="Фото 5">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/6h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/6h.jpg" data-src="/img/6h.jpg" alt="Фото 6">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/7h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/7h.jpg" data-src="/img/7h.jpg" alt="Фото 7">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/8h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/8h.jpg" data-src="/img/8h.jpg" alt="Фото 8">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/1h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/1h.jpg" data-src="/img/1h.jpg" alt="Фото 1">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/2h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/2h.jpg" data-src="/img/2h.jpg" alt="Фото 2">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/3h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/3h.jpg" data-src="/img/3h.jpg" alt="Фото 3">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/4h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/4h.jpg" data-src="/img/4h.jpg" alt="Фото 4">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/5h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/5h.jpg" data-src="/img/5h.jpg" alt="Фото 5">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/6h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/6h.jpg" data-src="/img/6h.jpg" alt="Фото 6">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/7h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/7h.jpg" data-src="/img/7h.jpg" alt="Фото 7">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/8h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/8h.jpg" data-src="/img/8h.jpg" alt="Фото 8">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/1h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/1h.jpg" data-src="/img/1h.jpg" alt="Фото 1">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/2h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/2h.jpg" data-src="/img/2h.jpg" alt="Фото 2">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/3h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/3h.jpg" data-src="/img/3h.jpg" alt="Фото 3">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/4h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/4h.jpg" data-src="/img/4h.jpg" alt="Фото 4">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/5h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/5h.jpg" data-src="/img/5h.jpg" alt="Фото 5">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/6h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/6h.jpg" data-src="/img/6h.jpg" alt="Фото 6">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/7h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/7h.jpg" data-src="/img/7h.jpg" alt="Фото 7">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/8h.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/8h.jpg" data-src="/img/8h.jpg" alt="Фото 8">
+        </picture>
+      </div>
+    </div>
+    <div class="swiper-btn swiper-button-prev swiper-button-prev--hammam">
+      <svg width="32" height="32" viewbox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" class="arrow">
+        <use xlink:href="img/sprite.svg#arrow">
+        </use>
+      </svg>
+    </div>
+    <div class="swiper-btn swiper-button-next swiper-button-next--hammam">
+      <svg width="32" height="32" viewbox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" class="arrow arrow--right">
+        <use xlink:href="img/sprite.svg#arrow">
+        </use>
+      </svg>
+    </div>
+  </div>
+  <div class="swiper-pagination swiper-pagination--hammam" data-target="hammamPag"></div>
+  <div class="swiper swiper-container swiper-spoiler swiper-pool" data-target="pool">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/1p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/1p.jpg" data-src="/img/1p.jpg" alt="Фото 1">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/2p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/2p.jpg" data-src="/img/2p.jpg" alt="Фото 2">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/3p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/3p.jpg" data-src="/img/3p.jpg" alt="Фото 3">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/4p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/4p.jpg" data-src="/img/4p.jpg" alt="Фото 4">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/5p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/5p.jpg" data-src="/img/5p.jpg" alt="Фото 5">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/6p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/6p.jpg" data-src="/img/6p.jpg" alt="Фото 6">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/7p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/7p.jpg" data-src="/img/7p.jpg" alt="Фото 7">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/8p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/8p.jpg" data-src="/img/8p.jpg" alt="Фото 8">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/1p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/1p.jpg" data-src="/img/1p.jpg" alt="Фото 1">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/2p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/2p.jpg" data-src="/img/2p.jpg" alt="Фото 2">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/3p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/3p.jpg" data-src="/img/3p.jpg" alt="Фото 3">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/4p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/4p.jpg" data-src="/img/4p.jpg" alt="Фото 4">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/5p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/5p.jpg" data-src="/img/5p.jpg" alt="Фото 5">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/6p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/6p.jpg" data-src="/img/6p.jpg" alt="Фото 6">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/7p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/7p.jpg" data-src="/img/7p.jpg" alt="Фото 7">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/8p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/8p.jpg" data-src="/img/8p.jpg" alt="Фото 8">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/1p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/1p.jpg" data-src="/img/1p.jpg" alt="Фото 1">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/2p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/2p.jpg" data-src="/img/2p.jpg" alt="Фото 2">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/3p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/3p.jpg" data-src="/img/3p.jpg" alt="Фото 3">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/4p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/4p.jpg" data-src="/img/4p.jpg" alt="Фото 4">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/5p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/5p.jpg" data-src="/img/5p.jpg" alt="Фото 5">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/6p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/6p.jpg" data-src="/img/6p.jpg" alt="Фото 6">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/7p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/7p.jpg" data-src="/img/7p.jpg" alt="Фото 7">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/8p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/8p.jpg" data-src="/img/8p.jpg" alt="Фото 8">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/1p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/1p.jpg" data-src="/img/1p.jpg" alt="Фото 1">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/2p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/2p.jpg" data-src="/img/2p.jpg" alt="Фото 2">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/3p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/3p.jpg" data-src="/img/3p.jpg" alt="Фото 3">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/4p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/4p.jpg" data-src="/img/4p.jpg" alt="Фото 4">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/5p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/5p.jpg" data-src="/img/5p.jpg" alt="Фото 5">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/6p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/6p.jpg" data-src="/img/6p.jpg" alt="Фото 6">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/7p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/7p.jpg" data-src="/img/7p.jpg" alt="Фото 7">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/8p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/8p.jpg" data-src="/img/8p.jpg" alt="Фото 8">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/1p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/1p.jpg" data-src="/img/1p.jpg" alt="Фото 1">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/2p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/2p.jpg" data-src="/img/2p.jpg" alt="Фото 2">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/3p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/3p.jpg" data-src="/img/3p.jpg" alt="Фото 3">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/4p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/4p.jpg" data-src="/img/4p.jpg" alt="Фото 4">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/5p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/5p.jpg" data-src="/img/5p.jpg" alt="Фото 5">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/6p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/6p.jpg" data-src="/img/6p.jpg" alt="Фото 6">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/7p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/7p.jpg" data-src="/img/7p.jpg" alt="Фото 7">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/8p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/8p.jpg" data-src="/img/8p.jpg" alt="Фото 8">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/1p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/1p.jpg" data-src="/img/1p.jpg" alt="Фото 1">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/2p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/2p.jpg" data-src="/img/2p.jpg" alt="Фото 2">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/3p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/3p.jpg" data-src="/img/3p.jpg" alt="Фото 3">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/4p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/4p.jpg" data-src="/img/4p.jpg" alt="Фото 4">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/5p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/5p.jpg" data-src="/img/5p.jpg" alt="Фото 5">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/6p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/6p.jpg" data-src="/img/6p.jpg" alt="Фото 6">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/7p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/7p.jpg" data-src="/img/7p.jpg" alt="Фото 7">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/8p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/8p.jpg" data-src="/img/8p.jpg" alt="Фото 8">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/1p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/1p.jpg" data-src="/img/1p.jpg" alt="Фото 1">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/2p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/2p.jpg" data-src="/img/2p.jpg" alt="Фото 2">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/3p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/3p.jpg" data-src="/img/3p.jpg" alt="Фото 3">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/4p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/4p.jpg" data-src="/img/4p.jpg" alt="Фото 4">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/5p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/5p.jpg" data-src="/img/5p.jpg" alt="Фото 5">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/6p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/6p.jpg" data-src="/img/6p.jpg" alt="Фото 6">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/7p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/7p.jpg" data-src="/img/7p.jpg" alt="Фото 7">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/8p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/8p.jpg" data-src="/img/8p.jpg" alt="Фото 8">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/1p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/1p.jpg" data-src="/img/1p.jpg" alt="Фото 1">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/2p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/2p.jpg" data-src="/img/2p.jpg" alt="Фото 2">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/3p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/3p.jpg" data-src="/img/3p.jpg" alt="Фото 3">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/4p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/4p.jpg" data-src="/img/4p.jpg" alt="Фото 4">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/5p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/5p.jpg" data-src="/img/5p.jpg" alt="Фото 5">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/6p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/6p.jpg" data-src="/img/6p.jpg" alt="Фото 6">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/7p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/7p.jpg" data-src="/img/7p.jpg" alt="Фото 7">
+        </picture>
+      </div>
+      <div class="swiper-slide">
+        <picture class="examples-pic">
+          <source srcset="/img/8p.webp" type="image/webp">
+          <img class="lazyload" loading="lazy" src="/img/8p.jpg" data-src="/img/8p.jpg" alt="Фото 8">
+        </picture>
+      </div>
+    </div>
+    <div class="swiper-btn swiper-button-prev swiper-button-prev--pool">
+      <svg width="32" height="32" viewbox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" class="arrow">
+        <use xlink:href="img/sprite.svg#arrow">
+        </use>
+      </svg>
+    </div>
+    <div class="swiper-btn swiper-button-next swiper-button-next--pool">
+      <svg width="32" height="32" viewbox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" class="arrow arrow--right">
+        <use xlink:href="img/sprite.svg#arrow">
+        </use>
+      </svg>
+    </div>
+  </div>
+  <div class="swiper-pagination swiper-pagination--pool" data-target="poolPag"></div>
+</section>  
+
+    </div>
+
+  </main>
+  <script src="/js/vendor.js"></script>
+  <script src="/js/scripts.js"></script>
+</body>
+</html>

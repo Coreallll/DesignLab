@@ -1,0 +1,146 @@
+.block-title {
+  margin-bottom: 8px;
+  font: $font-block-title;
+}
+
+.block-descr {
+  margin-bottom: 55px;
+  font: $font-block-descr;
+  max-width: 884px;
+}
+
+.table {
+  margin-bottom: $margin-section;
+
+  &__container {
+    border-spacing: 0px;
+    border-collapse: collapse;
+  }
+
+  &__stroke {
+    border-bottom: 1px solid #E1E1E1;
+    &:first-child {
+      border-top: 1px solid #E1E1E1;
+    }
+  }
+
+  &__stroke-title {
+    background-color: $color-block-background;    
+  }
+
+  &__cell {
+    padding: 13px 34px 10px 30px;
+    font: $font-regular;
+
+  }
+
+  &__cell-title {
+    padding-bottom: 15px;
+    font: $font-mini-title;
+    text-align: left;;
+    color: $color-black;
+    border: none;
+  }
+
+  &__cell-price {
+    padding-right: 33px;
+    padding-left: 41px;
+    text-align: right;
+  }
+}
+
+.btn-basket {
+  padding: 3px 16px 5px;
+  font: $font-mini-title;
+  font-size: 14px;
+  border-radius: 4px;
+  background-color: rgba(0, 102, 204, 0.1);
+  color: $color-primary;
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    background-color: $color-primary;
+    color: #FFFFFF;
+    transition: all .2s ease-in-out;
+  }
+}
+
+@media (max-width:1024px) {
+  .block-title {
+    margin-bottom: 17px;
+    text-align: center;
+    font: $font-block-title-mobile;
+  }
+
+  .block-descr {
+    margin-bottom: 43px;
+    font: $font-regular;
+  }
+
+  .table {
+    margin-bottom: 48px;
+    
+    &__container {
+      width: 100%;
+    }
+    
+    &__stroke {
+      position: relative;
+      border-bottom: none;
+    }
+
+    &__stroke-title {
+      display: none;
+    }
+
+    &__cell {
+      display: block;
+      border-top: none;
+      padding: 15px 28px 17px 30px;
+      border-bottom: 1px solid #E1E1E1;
+
+      &:first-child {
+        border-top: 1px solid #E1E1E1;
+      }
+
+      &:nth-child(5) {
+        padding: 0;
+        font-size: unset;
+        line-height: unset;
+        border: none;
+        
+        &::before {
+          display: none;
+        }
+      }
+      
+      &::before {
+        content: attr(data-label);
+        position: relative;
+        top: -15px;
+        left: -30px;
+        padding: 16px;
+        float: left;
+        font: $font-mini-title;
+        text-align: left;
+        background-color: #F5F5F7;
+        min-width: 109px;
+      }
+    }
+
+    &__cell-price {
+      position: relative;
+      padding-left: 30px;
+      text-align: left;
+    }
+
+    
+  }
+
+  .btn-basket {
+    position: absolute;
+    right: 16px;
+    bottom: 28px;
+  }
+
+}

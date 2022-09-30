@@ -1,0 +1,51 @@
+.hero {
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+
+  &__nav-list {
+    display: flex;
+  }
+
+  &__nav-item {
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+
+  &__nav-link {
+    padding-right: 8px;
+    font: 400 14px / 16px $Gilroy;
+    color: #52575F;
+  }
+
+  &__title {
+    margin-bottom: 94px;
+    font: 700 64px / 64px $Gilroy ;
+    text-align: center;
+  }
+}
+
+@media (max-width:1024px) {
+  .hero {
+    &__container {
+      padding: 0;
+    }
+
+    &__nav {
+      margin-bottom: 10px;
+    }
+
+    &__title {
+      margin-bottom: 46px;
+      font: 700 48px / 48px $Gilroy;
+    }
+  }
+}
