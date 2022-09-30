@@ -92,10 +92,11 @@
   <p class="block-descr">Должна иметь проверку полей: обязательное поле, формат, минимальное значение. При несоответствии должна выводиться соответствующая ошибка. Поле «Телефон» должен содержать маску ввода. </p>
   <form class="form-order" >
     <h3 class="form-order__title">Заказать проект</h3>
-    <h4 class="form-order__input-title">Название</h4>
-    <label class="form-order__name">
+    <div class="form-order__name">
+      <h4 class="form-order__input-title">Название</h4>
+      <div class="form-order__slider"></div>
       <input type="text" class="input-reset form-order__input form-order__input-name" id="name">
-    </label>
+    </div>
     <div class="form-order__flex form-order__calculations">
       <div class="form-order__price">
         <h4 class="form-order__input-title">Стоимость</h4>
@@ -108,30 +109,28 @@
       <div class="form-order__square">
         <h4 class="form-order__input-title">Площадь</h4>
         <div class="form-order__square-group">
-          <button type="button" class="btn-reset form-order__button-value form-order__button-min">
+          <button class="btn-reset form-order__button-value form-order__button-min">
             <span class="value minus"></span>
           </button>
           <div class="form-order__input-square-block">
             <input type="number" class="input-reset form-order__input form-order__input-square">
             <span class="form-order__input-square-placeholder">м<sup>2</sup></span>
           </div>
-          <button type="button" class="btn-reset form-order__button-value form-order__button-plus">
+          <button class="btn-reset form-order__button-value form-order__button-plus">
             <span class="value"></span>
             <span class="value plus"></span>
           </button>
         </div>
       </div>
-      <div class="form-order__block-checkbox">
+      <label class="form-order__checkbox">
         <h4 class="form-order__input-title">Отделка</h4>
-        <label class="form-order__checkbox">
-          <div class="checkbox">
-            <input type="checkbox" checked class="visually-hidden">
-            <span class="form-order__input-checkbox"></span>
-            <span class="checkbox-descr checkbox-descr--active">Вайтбокс</span>
-            <span class="checkbox-descr">Нет</span>
-          </div>
-        </label>
-      </div>
+        <div class="checkbox">
+          <input type="checkbox" checked class="visually-hidden">
+          <span class="form-order__input-checkbox"></span>
+          <span class="checkbox-descr checkbox-descr--active">Вайтбокс</span>
+          <span class="checkbox-descr">Нет</span>
+        </div>
+      </label>
     </div>
     <div class="form-order__flex form-order__contacts">
       <div class="form-order__phone">
@@ -143,15 +142,15 @@
         <input type="email" class="input-reset form-order__input form-order__input-email" id="email">
       </div>
     </div>
-    <label class="form-order__file-block">
+    <div class="form-order__file-block">
       <h4 class="form-order__input-title">Приложить файлы</h4>
-      <div class="form-order__file">
+      <label class="form-order__file">
         <span class="form-order__file-descr form-order__file-descr--title">Кликните или перенесите файлы в эту область.</span>
         <span class="form-order__file-descr">Только JPG, до 1 Мб</span>
         <input id="myFile" type="file" class="visually-hidden" accept="image/jpeg" multiple="multiple">
-      </div>
+      </label>
       <p id="file-name-block" class="file-name-block"></p>
-    </label>
+    </div>
     <div class="form-order__flex form-order__materials">
       <div class="form-order__selector">
         <h4 class="form-order__input-title">Материалы дома</h4>
@@ -186,7 +185,7 @@
       <h4 class="form-order__input-title">Пожелания</h4>
       <input type="text" class="form-control form-order__input-wish" id="choices-text-remove-button"  placeholder="укажите через запятую">
     </div>
-    <button class="btn-reset form-order__btn-send">Отправить заявку</button>
+    <button type="button" class="btn-reset form-order__btn-send">Отправить заявку</button>
   </form>
 </section>
 
